@@ -21,21 +21,22 @@ header {
     background: linear-gradient(135deg, #173b73, #2878c8);
     color: white;
     text-align: center;
-    padding: 35px 15px;
+    padding: 45px 15px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 34px;
+    font-size: 38px;
 }
 
 header p {
-    margin-top: 10px;
+    font-size: 18px;
+    margin: 12px 0 0;
 }
 
-.search-box {
-    max-width: 700px;
-    margin: 25px auto;
+.search-area {
+    max-width: 750px;
+    margin: 30px auto;
     padding: 0 15px;
     display: flex;
     gap: 10px;
@@ -43,24 +44,19 @@ header p {
 
 #search {
     flex: 1;
-    padding: 15px;
+    padding: 16px;
     border: 2px solid #2878c8;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 17px;
 }
 
-button {
-    padding: 15px 22px;
+.search-button {
+    padding: 16px 25px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #2878c8;
     color: white;
     font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #173b73;
 }
 
 .container {
@@ -69,56 +65,70 @@ button:hover {
     padding: 15px;
 }
 
-.card {
+.welcome {
     background: white;
-    padding: 25px;
-    margin-bottom: 18px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
 }
 
-.word {
-    font-size: 30px;
-    font-weight: bold;
+.welcome h2 {
     color: #173b73;
 }
 
-.type {
-    color: #777;
-    margin: 5px 0 15px;
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 25px;
 }
 
-.meaning {
-    font-size: 18px;
-    line-height: 1.6;
+.feature {
+    background: white;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
 }
 
-.example {
-    margin-top: 15px;
-    padding: 15px;
-    background: #eef5ff;
-    border-left: 5px solid #2878c8;
+.feature h3 {
+    color: #2878c8;
+}
+
+.dictionary-button {
+    margin-top: 25px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #173b73;
+    color: white;
+    font-size: 17px;
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 50px;
     background: #173b73;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 30px;
 }
 
 @media (max-width: 600px) {
     header h1 {
-        font-size: 27px;
+        font-size: 29px;
     }
 
-    .search-box {
+    .search-area {
         flex-direction: column;
     }
 
-    button {
+    .search-button {
         width: 100%;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -128,36 +138,89 @@ footer {
 
 <header>
     <h1>📖 ENGLISH DICTIONARY</h1>
-    <p>Learn English words, meanings and examples</p>
+    <p>Discover words. Learn meanings. Improve your English.</p>
 </header>
 
-<div class="search-box">
+<div class="search-area">
+
     <input
-        type="text"
         id="search"
-        placeholder="Search an English word..."
-        onkeyup="searchWord()"
+        type="text"
+        placeholder="Search for a word..."
     >
-    <button onclick="searchWord()">Search</button>
+
+    <button class="search-button" onclick="searchWord()">
+        🔍 Search
+    </button>
+
 </div>
 
 <div class="container">
 
-    <div class="card">
-        <div class="word">Ability</div>
-        <div class="type">noun</div>
-        <div class="meaning">
-            The power or skill to do something.
-        </div>
-        <div class="example">
-            Example: She has the ability to learn quickly.
-        </div>
+    <div class="welcome">
+
+        <h2>Welcome to English Dictionary</h2>
+
+        <p>
+            Explore English words, meanings,
+            pronunciations and example sentences.
+        </p>
+
+        <button
+            class="dictionary-button"
+            onclick="openDictionary()">
+            📚 Open Dictionary
+        </button>
+
     </div>
 
-    <div class="card">
-        <div class="word">Beautiful</div>
-        <div class="type">adjective</div>
-        <div class="meaning">
-            Very attractive or pleasing to look at.
+    <div class="features">
+
+        <div class="feature">
+            <h3>🔎 Search</h3>
+            <p>Find English words quickly.</p>
         </div>
-        <div class="example
+
+        <div class="feature">
+            <h3>📖 Meanings</h3>
+            <p>Understand words easily.</p>
+        </div>
+
+        <div class="feature">
+            <h3>💡 Examples</h3>
+            <p>See words used in sentences.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <h3>ENGLISH DICTIONARY</h3>
+    <p>Learn • Search • Improve Your English</p>
+    <p>© 2026 English Dictionary</p>
+</footer>
+
+<script>
+
+function openDictionary() {
+    window.location.href = "idea.html";
+}
+
+function searchWord() {
+
+    let word = document.getElementById("search").value.trim();
+
+    if (word === "") {
+        alert("Please type a word first.");
+        return;
+    }
+
+    window.location.href =
+        "idea.html?word=" + encodeURIComponent(word);
+}
+
+</script>
+
+</body>
+    </html>
