@@ -1,1 +1,53 @@
+{
+  "anymore": {
+    "phonetic": "/ˌeniˈmɔːr/",
+    "partOfSpeech": "adverb",
+    "definitions": [
+      {
+        "text": "At the present time; now.",
+        "example": "I don't see him anymore."
+      }
+    ],
+    "synonyms": ["now", "currently"],
+    "antonyms": []
+  },
 
+  "beautiful": {
+    "phonetic": "/ˈbjuːtɪfəl/",
+    "partOfSpeech": "adjective",
+    "definitions": [
+      {
+        "text": "Pleasing to the senses or mind.",
+        "example": "She has a beautiful voice."
+      }
+    ],
+    "synonyms": ["lovely", "attractive"],
+    "antonyms": ["ugly"]
+  },
+
+  "computer": {
+    "phonetic": "/kəmˈpjuːtər/",
+    "partOfSpeech": "noun",
+    "definitions": [
+      {
+        "text": "An electronic device that processes and stores data.",
+        "example": "I use my computer for work."
+      }
+    ],
+    "synonyms": ["PC"],
+    "antonyms": []
+  },
+
+  "hello": {
+    "phonetic": "/həˈloʊ/",
+    "partOfSpeech": "interjection",
+    "definitions": [
+      {
+        "text": "A greeting used when meeting or communicating with someone.",
+        "example": "Hello! How are you?"
+      }
+    ],
+    "synonyms": ["hi", "greetings"],
+    "antonyms": []
+  }
+}
