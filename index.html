@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENGLISH DICTIONARY</title>
 
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #173b73, #2878c8);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+.search-box {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 10px;
+}
+
+#search {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #2878c8;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2878c8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #173b73;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.word {
+    font-size: 30px;
+    font-weight: bold;
+    color: #173b73;
+}
+
+.type {
+    color: #777;
+    margin: 5px 0 15px;
+}
+
+.meaning {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.example {
+    margin-top: 15px;
+    padding: 15px;
+    background: #eef5ff;
+    border-left: 5px solid #2878c8;
+}
+
+footer {
+    margin-top: 40px;
+    background: #173b73;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📖 ENGLISH DICTIONARY</h1>
+    <p>Learn English words, meanings and examples</p>
+</header>
+
+<div class="search-box">
+    <input
+        type="text"
+        id="search"
+        placeholder="Search an English word..."
+        onkeyup="searchWord()"
+    >
+    <button onclick="searchWord()">Search</button>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <div class="word">Ability</div>
+        <div class="type">noun</div>
+        <div class="meaning">
+            The power or skill to do something.
+        </div>
+        <div class="example">
+            Example: She has the ability to learn quickly.
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="word">Beautiful</div>
+        <div class="type">adjective</div>
+        <div class="meaning">
+            Very attractive or pleasing to look at.
+        </div>
+        <div class="example
