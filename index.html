@@ -1,1 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ENGLISH DICTIONARY</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+}
+
+header {
+    background: linear-gradient(135deg, #0b57d0, #174ea6);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.search {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 0 15px;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    font-size: 18px;
+    border: 2px solid #d5dce8;
+    border-radius: 12px;
+    outline: none;
+}
+
+button {
+    padding: 0 24px;
+    border: 0;
+    border-radius: 12px;
+    background: #0b57d0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#results {
+    max-width: 850px;
+    margin: auto;
+    padding: 0 15px 50px;
+}
+
+.card {
+    background: white;
+    margin-bottom: 18px;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
+
+.word {
+    color: #0b57d0;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.type {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 10px;
+    background: #e8f0fe;
+    color: #174ea6;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.definition {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.example {
+    margin-top: 8px;
+    padding: 10px;
+    background: #f1f5f9;
+    border-left: 4px solid #0b57d0;
+    font-style: italic;
+}
+
+.tag {
+    display: inline-block;
+    margin: 4px 3px;
+    padding: 6px 9px;
+    background: #eef2f7;
+    border-radius: 6px;
+}
+
+.message {
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 600px) {
+    .search {
+        flex-direction: column;
+    }
+
+    button {
+        height: 50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📖 ENGLISH DICTIONARY</h1>
+    <p>Search 500,000+ English words</p>
+</header>
+
+<div class="search">
+
+    <input
+        id="searchInput"
+        type="search"
+        placeholder="Type any English word..."
+        autocomplete="off"
+    >
+
+    <button onclick="searchWord()">SEARCH</button>
+
+</div>
+
+<div id="results">
+
+    <div class="card message">
+        🔎 Type a word above to search the dictionary.
+    </div>
+
+</div>
+
+<script>
+
+let dictionary = {};
+let loaded = false;
+
+/* Load dictionary.json */
+
+async function loadDictionary() {
+
+    const results = document.getElementById("results");
+
+    try {
+
+        const response = await fetch("dictionary.json");
+
+        if (!response.ok) {
+            throw new Error("dictionary.json could not be loaded");
+        }
+
+        dictionary = await response.json();
+
+        loaded = true;
+
+        console.log(
+            "Dictionary loaded:",
+            Object.keys(dictionary).length,
+            "entries"
+        );
+
+    } catch (error) {
+
+        console.error(error);
+
+        results.innerHTML = `
+            <div class="card message">
+                <h2>⚠️ Dictionary database not found</h2>
+                <p>
+                    Make sure <b>dictionary.json</b> is in the
+                    same folder as <b>index.html</b>.
+                </p>
+            </div>
+        `;
+    }
+}
+
+
+/* Search */
+
+function searchWord() {
+
+    if (!loaded) {
+
+        alert("The dictionary is still loading. Please try again.");
+
+        return;
+    }
+
+    const input =
+        document.getElementById("searchInput");
+
+    const word =
+        input.value.trim().toLowerCase();
+
+    const results =
+        document.getElementById("results");
+
+
+    if (!word) {
+
+        results.innerHTML = `
+            <div class="card message">
+                Please type a word.
+            </div>
+        `;
+
+        return;
+    }
+
+
+    const entry = dictionary[word];
+
+
+    if (!entry) {
+
+        results.innerHTML = `
+            <div class="card message">
+                <h2>❌ Word not found</h2>
+                <p>
+                    No entry was found for
+                    <b>${escapeHTML(word)}</b>.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+
+    displayWord(word, entry);
+}
+
+
+/* Display word */
+
+function displayWord(word, entry) {
+
+    const results =
+        document.getElementById("results");
+
+
+    let html = `
+
+        <div class="card">
+
+            <div class="word">
+                ${escapeHTML(word)}
+            </div>
+
+    `;
+
+
+    if (entry.phonetic) {
+
+        html += `
+            <div>
+                🔊 ${escapeHTML(entry.phonetic)}
+            </div>
+        `;
+    }
+
+
+    if (entry.partOfSpeech) {
+
+        html += `
+            <div class="type">
+                ${escapeHTML(entry.partOfSpeech)}
+            </div>
+        `;
+    }
+
+
+    if (entry.definitions) {
+
+        entry.definitions.forEach(
+            (definition, index) => {
+
+                html += `
+
+                    <div class="definition">
+
+                        <b>${index + 1}.</b>
+                        ${escapeHTML(definition.text)}
+
+                `;
+
+
+                if (definition.example) {
+
+                    html += `
+
+                        <div class="example">
+                            Example:
+                            ${escapeHTML(
+                                definition.example
+                            )}
+                        </div>
+
+                    `;
+                }
+
+
+                html += `</div>`;
+            }
+        );
+    }
+
+
+    if (
+        entry.synonyms &&
+        entry.synonyms.length
+    ) {
+
+        html += `
+            <div class="definition">
+                <b>Synonyms:</b><br>
+        `;
+
+        entry.synonyms.forEach(word => {
+
+            html += `
+                <span class="tag">
+                    ${escapeHTML(word)}
+                </span>
+            `;
+
+        });
+
+        html += `</div>`;
+    }
+
+
+    if (
+        entry.antonyms &&
+        entry.antonyms.length
+    ) {
+
+        html += `
+            <div class="definition">
+                <b>Antonyms:</b><br>
+        `;
+
+        entry.antonyms.forEach(word => {
+
+            html += `
+                <span class="tag">
+                    ${escapeHTML(word)}
+                </span>
+            `;
+
+        });
+
+        html += `</div>`;
+    }
+
+
+    html += `</div>`;
+
+
+    results.innerHTML = html;
+}
+
+
+/* Protect the page from HTML in dictionary data */
+
+function escapeHTML(text) {
+
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+/* Start loading */
+
+loadDictionary();
+
+
+/* Enter key */
+
+document
+    .getElementById("searchInput")
+    .addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+            searchWord();
+        }
+
+    });
+
+</script>
+
+</body>
+  </html>
