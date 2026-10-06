@@ -1,81 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ENGLISH DICTIONARY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENGLISH DICTIONARY</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #222;
-}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f7fb;
+        }
 
-.header {
-    background: linear-gradient(135deg, #173b73, #2878c8);
-    color: white;
-    text-align: center;
-    padding: 40px 15px;
-}
+        header {
+            background: #173b73;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
 
-.header h1 {
-    margin: 0;
-    font-size: 36px;
-}
+        .search {
+            text-align: center;
+            padding: 20px;
+        }
 
-.header p {
-    font-size: 17px;
-}
+        input {
+            padding: 14px;
+            width: 65%;
+            font-size: 16px;
+        }
 
-.search {
-    max-width: 750px;
-    margin: 25px auto;
-    padding: 0 15px;
-    display: flex;
-    gap: 10px;
-}
+        button {
+            padding: 14px;
+            background: #2878c8;
+            color: white;
+            border: none;
+        }
 
-.search input {
-    flex: 1;
-    padding: 16px;
-    border: 2px solid #2878c8;
-    border-radius: 12px;
-    font-size: 17px;
-}
+        .word {
+            background: white;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 12px;
+        }
 
-.search button {
-    padding: 16px 25px;
-    border: none;
-    border-radius: 12px;
-    background: #2878c8;
-    color: white;
-}
+        h2 {
+            color: #173b73;
+        }
+    </style>
+</head>
 
-.alphabet {
-    text-align: center;
-    padding: 10px;
-}
+<body>
 
-.alphabet button {
-    margin: 4px;
-    padding: 9px 13px;
-    border: none;
-    border-radius: 20px;
-    background: white;
-    color: #173b73;
-}
+<header>
+    <h1>📖 ENGLISH DICTIONARY</h1>
+    <p>Learn English Words Easily</p>
+</header>
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 15px;
-}
+<div class="search">
+    <input type="text" placeholder="Search a word">
+    <button>🔍 Search</button>
+</div>
 
-.word-card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px
+<div class="word">
+    <h2>Ability</h2>
+    <p><b>Pronunciation:</b> /əˈbɪləti/</p>
+    <p><b>Meaning:</b> The power or skill to do something.</p>
+    <p><b>Example:</b> She has the ability to learn quickly.</p>
+</div>
+
+<div class="word">
+    <h2>Beautiful</h2>
+    <p><b>Meaning:</b> Very attractive or pleasing to look at.</p>
+    <p><b>Example:</b> The garden is beautiful.</p>
+</div>
+
+<div class="word">
+    <h2>Create</h2>
+    <p><b>Meaning:</b> To make something new.</p>
+    <p><b>Example:</b> We can create a new website.</p>
+</div>
+
+</body>
+</html>
