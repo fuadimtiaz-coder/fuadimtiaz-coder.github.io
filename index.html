@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Dictionary</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #aaa;
+    }
+
+    #result {
+      background: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .word {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .meaning {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>📖 English Dictionary</h1>
+
+<input
+  id="search"
+  type="text"
+  placeholder="Search an English word..."
+>
+
+<div id="result">
+  Type a word above.
+</div>
+
+<script>
+let dictionary = {};
+
+fetch("dictionary.json")
+  .then(response => response.json())
+  .then(data => {
+    dictionary = data;
+  });
+
+const searchBox = document.getElementById("search");
+const result = document.getElementById("result");
+
+searchBox.addEventListener("input", function () {
+
+  const word = searchBox.value.toLowerCase().trim();
+
+  if (word === "") {
+    result.innerHTML = "Type a word above.";
+    return;
+  }
+
+  if (dictionary[word]) {
+    result.innerHTML =
+      '<div class="word">' + word + '</div>' +
+      '<div class="meaning">' + dictionary[word] + '</div>';
+  } else {
+    result.innerHTML = "Word not found.";
+  }
+});
+</script>
+
+</body>
+  </html>
