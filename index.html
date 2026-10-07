@@ -1,145 +1,1073 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Government Laboratory High School, Dhaka</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-        }
+<title>Government Laboratory High School, Dhaka</title>
 
-        header {
-            background: #123b63;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        header h1 {
-            font-size: 36px;
-            margin: 0 0 10px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        header p {
-            font-size: 18px;
-            margin: 0;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f8;
+    color: #222;
+    line-height: 1.8;
+}
 
-        nav {
-            background: #0b2945;
-            padding: 15px;
-            text-align: center;
-        }
+header {
+    background: linear-gradient(135deg, #073b66, #12649b);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
+header h1 {
+    font-size: 42px;
+    margin: 0 0 15px;
+}
 
-        section {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-        }
+header p {
+    font-size: 22px;
+    margin: 5px;
+}
 
-        h2 {
-            color: #123b63;
-        }
+nav {
+    background: #062d4d;
+    text-align: center;
+    padding: 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
-        .welcome {
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
 
-        footer {
-            background: #123b63;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-    </style>
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #073b66;
+    font-size: 30px;
+    border-bottom: 3px solid #12649b;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #12649b;
+}
+
+.hero-box {
+    text-align: center;
+}
+
+.highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #eef5fa;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.timeline {
+    border-left: 4px solid #12649b;
+    padding-left: 25px;
+}
+
+.timeline div {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #062d4d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .highlight {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<header>
+<header id="home">
+
     <h1>Government Laboratory High School, Dhaka</h1>
+
     <p>আলো আরও আলো</p>
+
+    <p>
+        History • Heritage • Education • Achievement
+    </p>
+
 </header>
 
 <nav>
+
     <a href="#home">Home</a>
     <a href="#history">History</a>
-    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#campus">Campus</a>
+    <a href="#activities">Activities</a>
     <a href="#achievements">Achievements</a>
-    <a href="#gallery">Gallery</a>
+    <a href="#legacy">Legacy</a>
     <a href="#contact">Contact</a>
+
 </nav>
 
-<section id="home" class="welcome">
-    <h2>Welcome</h2>
+<div class="container">
+
+<section class="hero-box">
+
+    <h2>Welcome to the School Heritage Website</h2>
+
     <p>
-        Welcome to the official-style historical website of
-        Government Laboratory High School, Dhaka.
+        Welcome to the historical and educational website dedicated to
+        Government Laboratory High School, Dhaka. This website is designed
+        to present the story, identity, traditions, achievements and
+        educational journey of one of the important educational institutions
+        of Dhaka.
     </p>
+
     <p>
-        This website is being created to preserve and present
-        the history, achievements, memories and legacy of the school.
+        A school is much more than a collection of classrooms and buildings.
+        It is a place where generations of students learn, grow, make
+        friendships, develop discipline and prepare themselves for the
+        future. The memories created inside a school often remain with
+        students throughout their lives.
     </p>
+
+    <div class="highlight">
+
+        <div class="card">
+            <h3>📜 History</h3>
+            <p>
+                Discover the origins and development of the school.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Education</h3>
+            <p>
+                Learn about academic life and educational activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Achievements</h3>
+            <p>
+                Explore academic, cultural and sporting achievements.
+            </p>
+        </div>
+
+    </div>
+
 </section>
+
 
 <section id="history">
+
     <h2>Our History</h2>
+
     <p>
-        Government Laboratory High School was established in 1961.
-        This section will contain the complete history of the school,
-        from its establishment to the present day.
+        Government Laboratory High School has a long and important history
+        in the educational landscape of Dhaka. The institution was
+        established in 1961. Its development was closely connected with
+        teacher education and practical teaching. The school became a place
+        where students could receive education while also contributing to
+        the practical training environment of teachers.
     </p>
+
+    <p>
+        Since its establishment, the school has passed through many stages
+        of development. Generations of students have entered its classrooms,
+        learned from their teachers and eventually moved forward into
+        different professions and areas of society. Each generation has
+        added another chapter to the story of the institution.
+    </p>
+
+    <p>
+        The history of a school cannot be understood only by looking at
+        dates. It also includes the people who taught there, the students
+        who studied there, the activities that took place on the campus,
+        the traditions that developed and the memories carried by former
+        students. For this reason, this website aims to preserve both the
+        documented history and the wider heritage of the school.
+    </p>
+
+    <p>
+        Over the decades, Bangladesh has experienced enormous social,
+        technological and educational changes. Schools have also changed
+        with the country. Classrooms, teaching methods, learning resources,
+        examinations and student activities have developed over time.
+        Through these changes, educational institutions have continued their
+        central mission of preparing young people for the future.
+    </p>
+
+    <p>
+        Government Laboratory High School remains associated with the
+        educational history of Dhaka. Its long existence means that many
+        generations have a personal connection with the institution.
+        Former students often remember their teachers, classmates,
+        classrooms, playgrounds, examinations, cultural programs and
+        school events long after leaving the campus.
+    </p>
+
+    <h3>Historical Timeline</h3>
+
+    <div class="timeline">
+
+        <div>
+            <strong>1961</strong>
+            <p>
+                Government Laboratory High School was established.
+            </p>
+        </div>
+
+        <div>
+            <strong>Following Decades</strong>
+            <p>
+                The school continued to develop its educational activities
+                and became part of the lives of successive generations.
+            </p>
+        </div>
+
+        <div>
+            <strong>Modern Era</strong>
+            <p>
+                Education and school activities continued to evolve with
+                changes in technology and society.
+            </p>
+        </div>
+
+        <div>
+            <strong>Today</strong>
+            <p>
+                The school continues its educational journey while carrying
+                the heritage of its earlier generations.
+            </p>
+        </div>
+
+    </div>
+
 </section>
 
-<section id="about">
-    <h2>About the School</h2>
+
+<section id="education">
+
+    <h2>Education</h2>
+
     <p>
-        This section will contain information about the school,
-        its education, campus, teachers, students, facilities and activities.
+        Education is at the heart of every school. At Government Laboratory
+        High School, academic learning forms an important part of student
+        life. Students attend classes, study different subjects, complete
+        assignments and prepare for examinations while developing the
+        knowledge and skills required for their future.
     </p>
+
+    <p>
+        A successful educational environment depends on many people.
+        Teachers guide students through lessons and help them understand
+        difficult subjects. Students contribute through their curiosity,
+        questions, effort and participation. Parents and guardians also
+        play an important role by supporting students outside the classroom.
+    </p>
+
+    <p>
+        Modern education is not limited to memorizing information.
+        Students also need communication skills, creativity, critical
+        thinking, discipline, teamwork and the ability to solve problems.
+        School life provides opportunities for students to develop these
+        qualities through both academic and extracurricular activities.
+    </p>
+
 </section>
+
+
+<section id="campus">
+
+    <h2>Campus and Facilities</h2>
+
+    <p>
+        The school campus is an important part of student life. A school
+        environment includes classrooms, learning spaces, laboratories,
+        libraries, playgrounds and areas where students can participate in
+        different activities.
+    </p>
+
+    <p>
+        Laboratories are particularly important in science education because
+        they allow students to connect theoretical knowledge with practical
+        experience. A library is equally valuable because it provides access
+        to books and encourages students to develop independent reading and
+        research habits.
+    </p>
+
+    <p>
+        The physical environment of a school also creates memories.
+        Students remember the classrooms where they studied, the corridors
+        where they met friends, the playground where they participated in
+        sports and the locations where important school events took place.
+    </p>
+
+</section>
+
+
+<section id="activities">
+
+    <h2>Student Life and Activities</h2>
+
+    <p>
+        School life is not only about textbooks and examinations. Students
+        also need opportunities to express themselves, discover interests
+        and work together. Cultural programs, sports, clubs, competitions,
+        celebrations and other activities can help students develop
+        confidence and teamwork.
+    </p>
+
+    <p>
+        Sports can teach discipline, cooperation and perseverance. Cultural
+        activities can encourage creativity and appreciation of music,
+        literature, art and performance. Clubs and student organizations
+        can provide opportunities for students to develop leadership and
+        communication skills.
+    </p>
+
+    <p>
+        National occasions and school events can also create a strong sense
+        of community. Students, teachers and former students can come
+        together to celebrate important moments and preserve traditions.
+    </p>
+
+</section>
+
 
 <section id="achievements">
+
     <h2>Achievements</h2>
+
     <p>
-        Academic achievements, sports, cultural activities,
-        competitions and other accomplishments will be added here.
+        The achievements of a school are created by its students, teachers,
+        staff and wider community. Academic results are an important part of
+        a school's record, but achievement can take many forms.
     </p>
+
+    <p>
+        Students may represent their school in sports competitions,
+        cultural programs, debates, science activities, creative contests
+        and other events. Every successful student contributes to the
+        reputation and heritage of the institution.
+    </p>
+
+    <p>
+        Former students also contribute to the legacy of a school when they
+        succeed in professional, academic, social and creative fields.
+        Their stories can inspire younger students and demonstrate how
+        education can influence a person's future.
+    </p>
+
 </section>
 
-<section id="gallery">
-    <h2>Gallery</h2>
+
+<section id="legacy">
+
+    <h2>Heritage and Legacy</h2>
+
     <p>
-        Historical photographs, campus photographs and event
-        photographs will be added here.
+        The greatest legacy of a school is its people. Thousands of students
+        can pass through an institution over many decades, and each group
+        leaves behind memories and experiences that become part of the
+        school's identity.
     </p>
+
+    <p>
+        Teachers are an especially important part of that legacy. A teacher's
+        influence can continue long after a student has left school. Lessons,
+        advice, discipline and encouragement can shape students' decisions
+        and careers for many years.
+    </p>
+
+    <p>
+        Alumni also form an important connection between the past and the
+        present. Former students can preserve old photographs, documents,
+        stories and memories that might otherwise disappear. Collecting
+        these materials can help future generations understand what school
+        life was like in earlier periods.
+    </p>
+
+    <p>
+        This website is intended to become a growing digital archive of the
+        school's history. As reliable historical information, photographs,
+        documents and memories are collected, additional sections can be
+        added to make the archive larger and more complete.
+    </p>
+
 </section>
+
+
+<section>
+
+    <h2>Future of This Website</h2>
+
+    <p>
+        This is only the beginning. The website can eventually contain
+        separate pages for the complete history, former headteachers,
+        teachers and staff, academic records, student activities, sports,
+        clubs, publications, alumni, historical photographs, important
+        events and many other subjects.
+    </p>
+
+    <p>
+        A detailed historical timeline can also be developed so that visitors
+        can explore the school's journey year by year. Old photographs can
+        be placed beside modern photographs to show how the campus and
+        school life have changed over time.
+    </p>
+
+    <p>
+        The ultimate goal is to create a large digital heritage project that
+        students, teachers, alumni, parents and visitors can use to learn
+        about Government Laboratory High School and its contribution to
+        education in Dhaka.
+    </p>
+
+</section>
+
 
 <section id="contact">
+
     <h2>Contact</h2>
+
     <p>
-        Government Laboratory High School, Dhaka, Bangladesh.
+        <strong>Government Laboratory High School</strong>
     </p>
+
+    <p>
+        Dhanmondi, Dhaka, Bangladesh
+    </p>
+
+    <p>
+        This website is a historical and informational project dedicated to
+        preserving the school's story, heritage and memories.
+    </p>
+
 </section>
 
+</div>
+
+
 <footer>
-    <p>© 2026 Government Laboratory High School Historical Website</p>
+
+    <h3>Government Laboratory High School, Dhaka</h3>
+
+    <p>
+        History • Heritage • Education • Legacy
+    </p>
+
+    <p>
+        © 2026 School History & Heritage Website
+    </p>
+
 </footer>
 
 </body>
-  </html>
+    </html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Government Laboratory High School, Dhaka</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f8;
+    color: #222;
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(135deg, #073b66, #12649b);
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin: 0 0 15px;
+}
+
+header p {
+    font-size: 22px;
+    margin: 5px;
+}
+
+nav {
+    background: #062d4d;
+    text-align: center;
+    padding: 16px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #073b66;
+    font-size: 30px;
+    border-bottom: 3px solid #12649b;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #12649b;
+}
+
+.hero-box {
+    text-align: center;
+}
+
+.highlight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #eef5fa;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.timeline {
+    border-left: 4px solid #12649b;
+    padding-left: 25px;
+}
+
+.timeline div {
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #062d4d;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .highlight {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="home">
+
+    <h1>Government Laboratory High School, Dhaka</h1>
+
+    <p>আলো আরও আলো</p>
+
+    <p>
+        History • Heritage • Education • Achievement
+    </p>
+
+</header>
+
+<nav>
+
+    <a href="#home">Home</a>
+    <a href="#history">History</a>
+    <a href="#education">Education</a>
+    <a href="#campus">Campus</a>
+    <a href="#activities">Activities</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#legacy">Legacy</a>
+    <a href="#contact">Contact</a>
+
+</nav>
+
+<div class="container">
+
+<section class="hero-box">
+
+    <h2>Welcome to the School Heritage Website</h2>
+
+    <p>
+        Welcome to the historical and educational website dedicated to
+        Government Laboratory High School, Dhaka. This website is designed
+        to present the story, identity, traditions, achievements and
+        educational journey of one of the important educational institutions
+        of Dhaka.
+    </p>
+
+    <p>
+        A school is much more than a collection of classrooms and buildings.
+        It is a place where generations of students learn, grow, make
+        friendships, develop discipline and prepare themselves for the
+        future. The memories created inside a school often remain with
+        students throughout their lives.
+    </p>
+
+    <div class="highlight">
+
+        <div class="card">
+            <h3>📜 History</h3>
+            <p>
+                Discover the origins and development of the school.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Education</h3>
+            <p>
+                Learn about academic life and educational activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Achievements</h3>
+            <p>
+                Explore academic, cultural and sporting achievements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="history">
+
+    <h2>Our History</h2>
+
+    <p>
+        Government Laboratory High School has a long and important history
+        in the educational landscape of Dhaka. The institution was
+        established in 1961. Its development was closely connected with
+        teacher education and practical teaching. The school became a place
+        where students could receive education while also contributing to
+        the practical training environment of teachers.
+    </p>
+
+    <p>
+        Since its establishment, the school has passed through many stages
+        of development. Generations of students have entered its classrooms,
+        learned from their teachers and eventually moved forward into
+        different professions and areas of society. Each generation has
+        added another chapter to the story of the institution.
+    </p>
+
+    <p>
+        The history of a school cannot be understood only by looking at
+        dates. It also includes the people who taught there, the students
+        who studied there, the activities that took place on the campus,
+        the traditions that developed and the memories carried by former
+        students. For this reason, this website aims to preserve both the
+        documented history and the wider heritage of the school.
+    </p>
+
+    <p>
+        Over the decades, Bangladesh has experienced enormous social,
+        technological and educational changes. Schools have also changed
+        with the country. Classrooms, teaching methods, learning resources,
+        examinations and student activities have developed over time.
+        Through these changes, educational institutions have continued their
+        central mission of preparing young people for the future.
+    </p>
+
+    <p>
+        Government Laboratory High School remains associated with the
+        educational history of Dhaka. Its long existence means that many
+        generations have a personal connection with the institution.
+        Former students often remember their teachers, classmates,
+        classrooms, playgrounds, examinations, cultural programs and
+        school events long after leaving the campus.
+    </p>
+
+    <h3>Historical Timeline</h3>
+
+    <div class="timeline">
+
+        <div>
+            <strong>1961</strong>
+            <p>
+                Government Laboratory High School was established.
+            </p>
+        </div>
+
+        <div>
+            <strong>Following Decades</strong>
+            <p>
+                The school continued to develop its educational activities
+                and became part of the lives of successive generations.
+            </p>
+        </div>
+
+        <div>
+            <strong>Modern Era</strong>
+            <p>
+                Education and school activities continued to evolve with
+                changes in technology and society.
+            </p>
+        </div>
+
+        <div>
+            <strong>Today</strong>
+            <p>
+                The school continues its educational journey while carrying
+                the heritage of its earlier generations.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <p>
+        Education is at the heart of every school. At Government Laboratory
+        High School, academic learning forms an important part of student
+        life. Students attend classes, study different subjects, complete
+        assignments and prepare for examinations while developing the
+        knowledge and skills required for their future.
+    </p>
+
+    <p>
+        A successful educational environment depends on many people.
+        Teachers guide students through lessons and help them understand
+        difficult subjects. Students contribute through their curiosity,
+        questions, effort and participation. Parents and guardians also
+        play an important role by supporting students outside the classroom.
+    </p>
+
+    <p>
+        Modern education is not limited to memorizing information.
+        Students also need communication skills, creativity, critical
+        thinking, discipline, teamwork and the ability to solve problems.
+        School life provides opportunities for students to develop these
+        qualities through both academic and extracurricular activities.
+    </p>
+
+</section>
+
+
+<section id="campus">
+
+    <h2>Campus and Facilities</h2>
+
+    <p>
+        The school campus is an important part of student life. A school
+        environment includes classrooms, learning spaces, laboratories,
+        libraries, playgrounds and areas where students can participate in
+        different activities.
+    </p>
+
+    <p>
+        Laboratories are particularly important in science education because
+        they allow students to connect theoretical knowledge with practical
+        experience. A library is equally valuable because it provides access
+        to books and encourages students to develop independent reading and
+        research habits.
+    </p>
+
+    <p>
+        The physical environment of a school also creates memories.
+        Students remember the classrooms where they studied, the corridors
+        where they met friends, the playground where they participated in
+        sports and the locations where important school events took place.
+    </p>
+
+</section>
+
+
+<section id="activities">
+
+    <h2>Student Life and Activities</h2>
+
+    <p>
+        School life is not only about textbooks and examinations. Students
+        also need opportunities to express themselves, discover interests
+        and work together. Cultural programs, sports, clubs, competitions,
+        celebrations and other activities can help students develop
+        confidence and teamwork.
+    </p>
+
+    <p>
+        Sports can teach discipline, cooperation and perseverance. Cultural
+        activities can encourage creativity and appreciation of music,
+        literature, art and performance. Clubs and student organizations
+        can provide opportunities for students to develop leadership and
+        communication skills.
+    </p>
+
+    <p>
+        National occasions and school events can also create a strong sense
+        of community. Students, teachers and former students can come
+        together to celebrate important moments and preserve traditions.
+    </p>
+
+</section>
+
+
+<section id="achievements">
+
+    <h2>Achievements</h2>
+
+    <p>
+        The achievements of a school are created by its students, teachers,
+        staff and wider community. Academic results are an important part of
+        a school's record, but achievement can take many forms.
+    </p>
+
+    <p>
+        Students may represent their school in sports competitions,
+        cultural programs, debates, science activities, creative contests
+        and other events. Every successful student contributes to the
+        reputation and heritage of the institution.
+    </p>
+
+    <p>
+        Former students also contribute to the legacy of a school when they
+        succeed in professional, academic, social and creative fields.
+        Their stories can inspire younger students and demonstrate how
+        education can influence a person's future.
+    </p>
+
+</section>
+
+
+<section id="legacy">
+
+    <h2>Heritage and Legacy</h2>
+
+    <p>
+        The greatest legacy of a school is its people. Thousands of students
+        can pass through an institution over many decades, and each group
+        leaves behind memories and experiences that become part of the
+        school's identity.
+    </p>
+
+    <p>
+        Teachers are an especially important part of that legacy. A teacher's
+        influence can continue long after a student has left school. Lessons,
+        advice, discipline and encouragement can shape students' decisions
+        and careers for many years.
+    </p>
+
+    <p>
+        Alumni also form an important connection between the past and the
+        present. Former students can preserve old photographs, documents,
+        stories and memories that might otherwise disappear. Collecting
+        these materials can help future generations understand what school
+        life was like in earlier periods.
+    </p>
+
+    <p>
+        This website is intended to become a growing digital archive of the
+        school's history. As reliable historical information, photographs,
+        documents and memories are collected, additional sections can be
+        added to make the archive larger and more complete.
+    </p>
+
+</section>
+
+
+<section>
+
+    <h2>Future of This Website</h2>
+
+    <p>
+        This is only the beginning. The website can eventually contain
+        separate pages for the complete history, former headteachers,
+        teachers and staff, academic records, student activities, sports,
+        clubs, publications, alumni, historical photographs, important
+        events and many other subjects.
+    </p>
+
+    <p>
+        A detailed historical timeline can also be developed so that visitors
+        can explore the school's journey year by year. Old photographs can
+        be placed beside modern photographs to show how the campus and
+        school life have changed over time.
+    </p>
+
+    <p>
+        The ultimate goal is to create a large digital heritage project that
+        students, teachers, alumni, parents and visitors can use to learn
+        about Government Laboratory High School and its contribution to
+        education in Dhaka.
+    </p>
+
+</section>
+
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <p>
+        <strong>Government Laboratory High School</strong>
+    </p>
+
+    <p>
+        Dhanmondi, Dhaka, Bangladesh
+    </p>
+
+    <p>
+        This website is a historical and informational project dedicated to
+        preserving the school's story, heritage and memories.
+    </p>
+
+</section>
+
+</div>
+
+
+<footer>
+
+    <h3>Government Laboratory High School, Dhaka</h3>
+
+    <p>
+        History • Heritage • Education • Legacy
+    </p>
+
+    <p>
+        © 2026 School History & Heritage Website
+    </p>
+
+</footer>
+
+</body>
+    </html>
